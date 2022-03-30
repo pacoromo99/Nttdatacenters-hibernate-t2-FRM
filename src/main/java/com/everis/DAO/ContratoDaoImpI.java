@@ -1,5 +1,7 @@
 package com.everis.DAO;
 
+import java.util.List;
+
 import org.hibernate.Session;
 
 import com.everis.Contrato;
@@ -38,5 +40,10 @@ public class ContratoDaoImpI implements ContratoDaoI
 		}
 		session.update(contrato);
 		session.getTransaction().commit();
+	}
+
+	public List<Contrato> select() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

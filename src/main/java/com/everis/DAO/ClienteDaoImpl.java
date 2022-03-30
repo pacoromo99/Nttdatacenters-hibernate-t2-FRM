@@ -6,7 +6,6 @@ import java.util.List;
 import org.hibernate.Session;
 
 import com.everis.Cliente;
-import com.everis.Contrato;
 
 public class ClienteDaoImpl implements ClienteDaoI {
 	private Session session;
@@ -23,7 +22,7 @@ public class ClienteDaoImpl implements ClienteDaoI {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Cliente> searchCliente()
+	public List<Cliente> select()
 	{
 		List <Cliente> res = new ArrayList<Cliente>();
 		if(!session.getTransaction().isActive()) 

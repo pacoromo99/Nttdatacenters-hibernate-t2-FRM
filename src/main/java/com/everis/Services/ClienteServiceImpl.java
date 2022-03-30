@@ -1,5 +1,8 @@
 package com.everis.Services;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 
 import com.everis.Cliente;
@@ -44,5 +47,16 @@ public class ClienteServiceImpl implements ClienteServiceI
 			this.cliente.delete(cliente);
 		}
 		
+	}
+	@SuppressWarnings("unchecked")
+	public List<Cliente> select(Session session)
+	{
+		List <Cliente> res = new ArrayList<Cliente>();
+		if(!session.getTransaction().isActive()) 
+		{
+			session.getTransaction().begin();
+		}
+		res = session.createQuery("FROM" + Cliente.class).list();
+		return res;
 	}
 }

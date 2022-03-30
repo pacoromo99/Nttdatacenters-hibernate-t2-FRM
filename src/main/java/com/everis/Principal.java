@@ -3,8 +3,6 @@ package com.everis;
 import java.sql.Date;
 
 import org.hibernate.Session;
-import org.hibernate.internal.SessionImpl;
-
 import com.everis.Services.ClienteServiceI;
 import com.everis.Services.ClienteServiceImpl;
 import com.everis.Services.ContratoServiceI;
@@ -13,6 +11,7 @@ import com.everis.Services.ContratoServiceImpl;
 public class Principal {
 
 	
+	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 	

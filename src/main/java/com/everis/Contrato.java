@@ -16,7 +16,6 @@ import javax.persistence.Table;
 public class Contrato 
 {
 	private Long id;
-	private String nombre;
 	private Date fechaVigencia;
 	private Date fechaCaducidad;
 	private Double precioMensual;
